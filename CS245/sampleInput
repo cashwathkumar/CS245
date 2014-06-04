@@ -1,0 +1,32 @@
+<Delemiter character |>
+Includes |RIMS.h
+NumberOfStateMachines |2
+///////////////(delimieter between each state machine)
+BL <State Machine name with no spaces>
+Period(ms) |500
+NumberOfStates |2
+<StateInformation>
+<StateName> <StateIndex> <OutDegree> <Action> (Specify start state with index 0; multiple actions separted by |)
+LedOff		|	0		|	1		|B0 = 0;
+LedOn		|	1		|	1		|B0 = 1;
+<TransitionInformation> (use indices to specify transition)
+<FromState> <ToState> <condition>
+0 | 1 
+1 | 0
+///////////////(delimieter between each state machine)
+DM <State Machine name with no spaces>
+Period(ms) |200
+NumberOfStates |3
+<StateInformation>
+<StateName> <StateIndex> <OutDegree> <Action> (Specify start state with index 0; multiple actions separted by |)
+0		|	0		|	2		|C0 = 0;|mtn = 0;
+1		|	1		|	2		
+2		|	2		|	2		|C0 = !C0;|mtn = 1;
+<TransitionInformation> (use indices to specify transition)
+<FromState> <ToState> <condition>
+0 | 0	| !A0 
+0 | 1	| A0
+1 | 0	| !A0
+1 | 2   | A0
+2 | 2   | A0
+2 | 1   | !A0
