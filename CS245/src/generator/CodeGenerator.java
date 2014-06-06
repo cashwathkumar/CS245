@@ -118,7 +118,7 @@ public class CodeGenerator {
 		}
 		else
 		{
-			System.out.println("Invalid input");
+			System.out.println("Invalid commandline input");
 		}
 	}
 }

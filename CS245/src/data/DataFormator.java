@@ -389,6 +389,8 @@ public class DataFormator {
 			
 			constructActions(tickFns[i], i);
 			
+			tickFns[i].append("\treturn state;\n");
+			
 			tickFns[i].append("}\n");
 		}
 	}

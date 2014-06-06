@@ -59,7 +59,7 @@ public class InputParser {
 		catch (NumberFormatException ne)
 		{
 			readSuccess = false;
-			System.out.println("Incorrect input format");
+			System.out.println("Incorrect input not a number");
 		}
 		catch (ArrayIndexOutOfBoundsException ae)
 		{
